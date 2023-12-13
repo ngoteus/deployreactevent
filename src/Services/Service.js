@@ -13,11 +13,11 @@ export const eventsResource = '/Evento';
 /**
  * Rota para o recurso Listar Minhas Presenças
  */
-export const myEventsResource = '/PresencasEvento/ListarMinhas';
+export const myEventsResource = '/Presencas/ListarMinhas';
 /**
  * Rota para o recurso Presenças Evento
  */
-export const presencesEventResource = '/PresencasEvento';
+export const presencesEventResource = '/Presencas';
 /**
  * Rota para o recurso Presenças Evento
  */
@@ -39,6 +39,8 @@ export const institutionResource = '/Instituicao';
  * Rota para o recurso Login
  */
 export const loginResource = '/Login';
+
+export const pastEventsResource = '/Evento/ListarAnteriores';
 
 // const apiPort = '5000';
 // const localApiUri = `http://localhost:${apiPort}/api`;

@@ -9,6 +9,7 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import TestePage from "../pages/TestePage/TestePage";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import DetalhesEvento from "../pages/DetalhesEvento/DetalhesEvento";
 import { PrivateRoute } from "./PrivateRoute";
 import EventosAlunoPage from "../pages/EventosAlunoPage/EventosAlunoPage";
 
@@ -35,6 +36,14 @@ const Rotas = () => {
           element={
             <PrivateRoute redirectTo="/">
               <EventosPage />
+            </PrivateRoute>
+          }
+        />
+        <Route 
+          path="/detalhes-evento"
+          element={
+            <PrivateRoute redirectTo="/">
+              <DetalhesEvento/>
             </PrivateRoute>
           }
         />
