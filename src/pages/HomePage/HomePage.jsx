@@ -103,6 +103,8 @@ const HomePage = () => {
                   description={e.descricao}
                   eventDate={e.dataEvento}
                   idEvent={e.idEvento}
+                  buttonText='Visualizar'
+                  buttonLink={`/detalhes-evento/${pastEvents.idEvento}/${pastEvents.nomeEvento}`}
                 />
               );
             })}

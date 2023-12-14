@@ -31,6 +31,8 @@ const Rotas = () => {
           }
         />
 
+      
+
         <Route
           path="/eventos"
           element={
@@ -40,13 +42,12 @@ const Rotas = () => {
           }
         />
         <Route 
-          path="/detalhes-evento"
+          path="/detalhes-evento/:idEvento/:nomeEvento"
           element={
-            <PrivateRoute redirectTo="/">
-              <DetalhesEvento/>
-            </PrivateRoute>
+              <DetalhesEvento/>     
           }
         />
+        
 
         <Route
           path="/eventos-aluno"
