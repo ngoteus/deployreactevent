@@ -8,8 +8,9 @@ import "react-tooltip/dist/react-tooltip.css";
 
 // import trashDelete from "../../../assets/images/trash-delete.svg";
 import "../../EventosAlunoPage/TableEvA/TableEvA.css";
+import './TableDetalhe.css'
 
-const TableDetalhe = ({ dados, fnConnect = null, fnShowModal = null }) => {
+const TableDetalhe = ({ nomeEvento,descricao,dataEvento }) => {
   return (
     <table className="tbal-data">
       <thead className="tbal-data__head">
@@ -27,51 +28,23 @@ const TableDetalhe = ({ dados, fnConnect = null, fnShowModal = null }) => {
         </tr>
       </thead>
       <tbody>
-        {dados.map((e) => {
-          return (
+        
             <tr className="tbal-data__head-row" key={Math.random()}>
               <td className="tbal-data__data tbal-data__data--big">
-                {e.nomeEvento}
+                {nomeEvento}
               </td>
 
               <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
-                {/* {e.dataEvento} */}
-                {dateFormateDbToView(e.dataEvento)}
+                
+                {dataEvento}
               </td>
 
               <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
-                {/* imagem do comentário - abre o modal */}
-                {new Date(e.dataEvento) < Date.now() ? (
-                  <img
-                    className="tbal-data__icon"
-                    // idevento={e.idEvento}
-                    src={comentaryIcon}
-                    alt=""
-                    onClick={() => {
-                      fnShowModal(e.idEvento);
-                    }}
-                  />
-                ) : null}
-                <ToggleSwitch
-                  toggleActive={e.situacao}
-                  manipulationFunction={
-                    new Date(e.dataEvento) > Date.now()
-                      ? () => {
-                          fnConnect(
-                            e.idEvento,
-                            e.situacao ? "unconnect" : "connect",
-                            e.idPresencaEvento //parâmetro opcional
-                          );
-                        }
-                      : () => {
-                          alert("Evento não está mais disponível");
-                        }
-                  }
-                />
+               {descricao}
               </td>
             </tr>
-          );
-        })}
+          
+     
       </tbody>
     </table>
   );

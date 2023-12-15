@@ -42,7 +42,7 @@ const Rotas = () => {
           }
         />
         <Route 
-          path="/detalhes-evento/:idEvento/:nomeEvento"
+          path="/detalhes-evento/:idEvento"
           element={
               <DetalhesEvento/>     
           }
